@@ -91,6 +91,11 @@
   .tags{margin-top:4px;display:flex;gap:5px;flex-wrap:wrap}
   .tag{font-size:11.5px;padding:1px 8px;border-radius:20px;background:var(--tag);color:var(--tag-ink)}
   .tag.warnt{background:var(--warnt-bg);color:var(--warnt-ink)}
+  .pair{display:flex;gap:12px;justify-content:flex-end;align-items:flex-end}
+  .pair .cap{font-size:11px;color:var(--muted);font-weight:700}
+  .pair .big2{font-size:15px;font-weight:700;color:var(--muted)}
+  .pair .cell{text-align:right}
+  .pct .pair .big{font-size:19px}
   .tag.sp{background:#e8e3f7;color:#4b3b8f;font-weight:700}
   @media (prefers-color-scheme: dark){.tag.sp{background:#2d2846;color:#c4b8f2}}
   .tag.reg{background:var(--g-bg);color:var(--g);font-weight:700}
@@ -209,7 +214,7 @@
     <p><b>9등급에서 5등급으로 환산.</b> 부산광역시교육청학력개발원 진학 PEN AI의 내신 변환 기준표를 거꾸로 읽어 씁니다. 표의 범위 가운데 값을 직선으로 이어 9등급 합격선을 5등급 값으로 바꿉니다. 부산 학생 자료를 바탕으로 한 일반 기준이라 참고용입니다.</p>
     <p><b>퍼센트 계산.</b> 내 내신이 환산된 50%컷과 같으면 50%, 좋을수록 올라가고 나쁠수록 내려가는 S자 곡선을 씁니다. 학종은 내신 외 요소가 커서 교과 계산기보다 곡선을 완만하게 잡았습니다. 곡선의 모양은 실제 합격 결과로 검증한 것이 아닌 가정입니다. 범위는 해마다 바뀌는 합격선과 환산 오차를 고려해 넓게 잡고, 모집인원이 5명 이하이거나 확인이 필요한 학과는 더 넓게 잡습니다.</p>
     <p><b>50%컷이 70%컷보다 낮은 학과.</b> 학종은 합격자를 서류 평가 점수 순으로 세우는 경우가 많아, 50% 지점 학생의 내신이 70% 지점 학생보다 낮게 공개되기도 합니다. 충북대, 강원대, 경상국립대, 동덕여대, 홍익대에 많고, 이런 학과는 내신의 영향이 특히 작다고 보면 됩니다.</p>
-    <p><b>특목고 기준 전형 보정.</b> 전형마다 학종 50%컷 가운데 값과 같은 대학 교과전형 70%컷 가운데 값을 각각 5등급으로 바꿔 비교했고, 학종 쪽이 0.3등급 이상 나쁘면 특목고나 자사고 합격자가 섞여 컷이 낮아진 전형으로 봤습니다(21개 전형, 522개 학과). 이 전형은 일반고 기준 컷을 추정해서 계산합니다. 같은 학과의 교과전형 70%컷을 5등급으로 바꾼 값에 0.2를 더한 값을 일반고 기준 50%컷으로 쓰고, 교과에 같은 학과가 없으면 전형 전체의 학종과 교과 차이가 0.2만 남도록 옮깁니다. 원래 공개된 컷보다 느슨해지지는 않게 했습니다. 대학이 발표한 구분이 아니라 추정이고, 0.2라는 값도 정한 가정입니다. 원래 값은 학과를 펼치면 볼 수 있습니다.</p>
+    <p><b>특목고 기준 전형과 일반고 보정.</b> 전형마다 학종 50%컷 가운데 값과 같은 대학 교과전형 70%컷 가운데 값을 각각 5등급으로 바꿔 비교했고, 학종 쪽이 0.3등급 이상 나쁘면 특목고나 자사고 합격자가 섞여 컷이 낮아진 전형으로 봤습니다(21개 전형, 522개 학과). 이 전형은 원래 공개된 컷으로 계산한 특목고 기준 값을 그대로 두고, 그 옆에 일반고 기준으로 보정한 값을 같이 보여줍니다. 색깔과 정렬, 요약 막대는 일반고 보정 값을 기준으로 합니다. 같은 학과의 교과전형 70%컷을 5등급으로 바꾼 값에 0.2를 더한 값을 일반고 기준 50%컷으로 쓰고, 교과에 같은 학과가 없으면 전형 전체의 학종과 교과 차이가 0.2만 남도록 옮깁니다. 원래 공개된 컷보다 느슨해지지는 않게 했습니다. 대학이 발표한 구분이 아니라 추정이고, 0.2라는 값도 정한 가정입니다. 원래 값은 학과를 펼치면 볼 수 있습니다.</p>
     <p><b>신뢰도.</b> 학종은 내신만으로 판단할 수 없어 어떤 학과도 높음으로 표시하지 않습니다. 모집인원 10명 이상이고 특이값이 아니면 보통, 그 밖에는 낮음입니다.</p>
     <p><b>빠진 것.</b> 서울대, 동국대, 한국외대, 서경대는 넣지 않았습니다. 수능최저는 전형마다 달라 따지지 않습니다. 대학마다 반영 교과와 학년 비율이 다르고, 일부 대학은 여러 캠퍼스 학과가 한 표에 섞여 있습니다.</p>
   </details>
@@ -2425,7 +2430,10 @@ function evalRow(row, s, shift){
   const center = clip(prob(s,c5)), lo = clip(prob(s,c5-spread)), hi = clip(prob(s,c5+spread));
   const conf = (!row.flag && !row.sp && n>=10 && !row.inv) ? '보통' : '낮음';
   const need70 = c5 + B + K*Math.log(100/70-1);
-  return {...row, u, c5, raw5, c705:c70, center, lo, hi, conf, need70};
+  // 특목고 기준(원래 공개된 컷) 값도 같이 계산
+  let raw = null;
+  if(row.est){ const r5 = raw5 + (shift||0); raw = {c5:r5, center:clip(prob(s,r5)), lo:clip(prob(s,r5-spread)), hi:clip(prob(s,r5+spread))}; }
+  return {...row, u, c5, raw5, raw, c705:c70, center, lo, hi, conf, need70};
 }
 function band(v){ return v>=70?'g':(v>=40?'y':'r'); }
 function bandLab(v){ return v>=70?'가능성 높음':(v>=40?'가능성 보통':'가능성 낮음'); }
@@ -2529,7 +2537,7 @@ function render(){
       const tags = [`<span class="tag">${CATS[e.cat]}</span>`, `<span class="tag">${e.tname}</span>`];
       if(e.iv) tags.push(`<span class="tag warnt">면접 있음</span>`);
       tags.push(`<span class="tag">신뢰도 ${e.conf}</span>`);
-      if(e.sp) tags.push(`<span class="tag sp">일반고 기준으로 보정(추정)</span>`);
+      if(e.sp) tags.push(`<span class="tag sp">특목고 기준 전형, 일반고 보정 같이 표시</span>`);
       if(e.inv) tags.push(`<span class="tag warnt">50%컷이 70%컷보다 낮음</span>`);
       if(e.flag==='o') tags.push(`<span class="tag warnt">다른 학과와 차이 큼, 확인 필요</span>`);
       if(e.flag==='h') tags.push(`<span class="tag warnt">합격선이 유난히 낮음, 확인 필요</span>`);
@@ -2538,7 +2546,9 @@ function render(){
       if(s<=e.need70) need = '지금 내신이면 70% 이상';
       else if(e.need70<1) need = '내신 1.00이어도 70%는 어려움';
       else need = `70%가 되려면 내신 ${e.need70.toFixed(2)} (${(s-e.need70).toFixed(2)} 개선)`;
-      const pctHtml = `<div class="big">${pctText(e)}</div><div class="lab">${bandLab(e.center)}</div><div class="simline">${diffTxt}</div>` +
+      const pctHtml = (e.raw
+          ? `<div class="pair"><div class="cell"><div class="cap">특목고 기준</div><div class="big2">${pctText(e.raw)}</div></div><div class="cell main"><div class="cap">일반고 보정</div><div class="big">${pctText(e)}</div></div></div><div class="lab">${bandLab(e.center)}</div><div class="simline">${diffTxt}</div>`
+          : `<div class="big">${pctText(e)}</div><div class="lab">${bandLab(e.center)}</div><div class="simline">${diffTxt}</div>`) +
           (e.sim!==null ? `<div class="simline">바뀌면 약 ${fmt(e.sim)}% (${e.sim-e.center>=0?'+':''}${fmt(e.sim-e.center)}%p)</div>` : '');
       const gauge = `<div class="gauge" aria-hidden="true"><span class="rg" style="left:${e.lo}%;width:${Math.max(1,e.hi-e.lo)}%"></span><span class="ct" style="left:${e.center}%"></span></div>`;
       const fav = favs.has(id);
@@ -2556,7 +2566,7 @@ function render(){
           <tr><td>2026 경쟁률</td><td>${e.comp==null?'자료에 없음':e.comp+' 대 1'}</td></tr>
           <tr><td>2026 50%컷 (9등급)</td><td>${e.c50.toFixed(2)} (계산 기준)</td></tr>
           <tr><td>2026 70%컷 (9등급)</td><td>${e.c70.toFixed(2)} (참고)</td></tr>
-          ${e.est?`<tr><td>일반고 기준 추정</td><td>50%컷 ${e.c5.toFixed(2)} (원래 공개된 값 환산 ${e.raw5.toFixed(2)}). ${e.est[1]===1?`같은 학과 교과전형 70%컷 ${e.est[2].toFixed(2)}(9등급)을 5등급으로 바꾼 값에 0.2를 더함.`:'교과에 같은 학과가 없어, 이 전형 전체의 학종과 교과 차이가 0.2만 남도록 옮김.'} 계산은 이 값을 기준으로 함.</td></tr>`:''}
+          ${e.est?`<tr><td>일반고 기준 추정</td><td>50%컷 ${e.c5.toFixed(2)} (원래 공개된 값 환산 ${e.raw5.toFixed(2)}). ${e.est[1]===1?`같은 학과 교과전형 70%컷 ${e.est[2].toFixed(2)}(9등급)을 5등급으로 바꾼 값에 0.2를 더함.`:'교과에 같은 학과가 없어, 이 전형 전체의 학종과 교과 차이가 0.2만 남도록 옮김.'} 색깔과 정렬은 일반고 보정 값을 기준으로 함. 원래 공개된 컷으로 계산한 특목고 기준 값은 약 ${fmt(e.raw.center)}%.</td></tr>`:''}
           <tr><td>5등급제 환산 추정</td><td>50%컷 ${e.c5.toFixed(2)}, 70%컷 ${e.c705.toFixed(2)} (내 내신 ${s.toFixed(2)})${shift!==0?`, 합격선 가정 ${shift>0?'+':''}${shift.toFixed(1)} 반영`:''}</td></tr>
           <tr><td>추정 가운데 값</td><td>약 ${fmt(e.center)}%</td></tr>
           <tr><td>수능최저</td><td>학종은 전형마다 수능최저 여부가 달라 이 화면에서 따지지 않음. 모집요강으로 확인.</td></tr>
